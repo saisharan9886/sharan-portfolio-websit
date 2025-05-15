@@ -28,7 +28,6 @@ const HeroSection = () => {
   };
 
   const handleDownloadResume = () => {
-    // Use the profile image as a placeholder for resume download
     const link = document.createElement('a');
     link.href = "/lovable-uploads/0a5ad479-cd9c-462e-ac22-d0afa93119b4.png";
     link.download = "P_Sai_Sharan_Resume.png";
@@ -39,14 +38,14 @@ const HeroSection = () => {
 
   return (
     <section id="home" className="min-h-screen flex items-center justify-center bg-gradient-to-br from-white to-blue-50">
-      <div className="section-container flex flex-col md:flex-row items-center">
-        <div className="md:w-1/2 text-center md:text-left mb-10 md:mb-0 order-2 md:order-1 animate-fadeIn">
+      <div className="section-container">
+        <div className="md:w-1/2 text-center md:text-left mb-10 md:mb-0 order-2 md:order-1 animate-fadeIn mx-auto">
           <p className="text-lg text-portfolio-blue font-medium mb-2">Hi, I'm</p>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-portfolio-black mb-4">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-portfolio-black mb-4 whitespace-nowrap">
             P. Sai Sharan
           </h1>
           
-          <div className="h-14 relative">
+          <div className="h-14 relative mb-8">
             <div className="absolute inset-0 flex items-center">
               <h2 className="text-2xl md:text-3xl font-medium text-portfolio-darkBlue opacity-0 animate-slideUp" style={{animationDelay: '0.3s', animationFillMode: 'forwards'}}>
                 I'm a{" "}
@@ -57,7 +56,7 @@ const HeroSection = () => {
             </div>
           </div>
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start mt-12 opacity-0 animate-slideUp" style={{animationDelay: '0.6s', animationFillMode: 'forwards'}}>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start mt-8 opacity-0 animate-slideUp" style={{animationDelay: '0.6s', animationFillMode: 'forwards'}}>
             <Button 
               onClick={scrollToAbout}
               className="bg-portfolio-blue hover:bg-portfolio-darkBlue text-white px-6 py-2"

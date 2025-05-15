@@ -53,25 +53,6 @@ const AboutSection = () => {
                   <p className="text-gray-700 leading-relaxed mt-4">
                     I enjoy tackling complex problems and am always eager to learn new technologies and methodologies to enhance my development capabilities.
                   </p>
-                  
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
-                    <div>
-                      <p className="text-gray-600 font-medium">Name:</p>
-                      <p>P. Sai Sharan</p>
-                    </div>
-                    <div>
-                      <p className="text-gray-600 font-medium">Location:</p>
-                      <p>Hyderabad, India</p>
-                    </div>
-                    <div>
-                      <p className="text-gray-600 font-medium">Email:</p>
-                      <p>paluttlasaisharan2k5@gmail.com</p>
-                    </div>
-                    <div>
-                      <p className="text-gray-600 font-medium">Degree:</p>
-                      <p>Computer Science Engineering</p>
-                    </div>
-                  </div>
                 </CardContent>
               </Card>
             )}

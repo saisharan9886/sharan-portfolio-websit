@@ -11,30 +11,24 @@ const SkillsSection = () => {
       { name: "Python", icon: "/lovable-uploads/cc8163fd-a0ad-4e38-a6c1-c62530fd5845.png", level: 75 },
     ],
     frontend: [
-      { name: "React", icon: "⚛️", level: 90 },
-      { name: "HTML", icon: "🌐", level: 95 },
-      { name: "CSS", icon: "🎨", level: 85 },
-      { name: "JavaScript", icon: "𝙅𝙎", level: 95 },
+      { name: "React", icon: "/lovable-uploads/0cbc459e-9604-40fa-a19e-a558211ee261.png", level: 90 },
+      { name: "TypeScript", icon: "/lovable-uploads/e3aa28f7-f9a9-4301-a9c5-71e715d4ccf0.png", level: 85 },
+      { name: "HTML", icon: "/lovable-uploads/1672fa3d-1777-4f15-a40a-04bce625191e.png", level: 95 },
+      { name: "CSS", icon: "/lovable-uploads/9b8487f9-10b5-4fe3-87cb-7796837e2f6b.png", level: 85 },
       { name: "Bootstrap", icon: "🅱️", level: 80 },
-      { name: "TypeScript", icon: "𝙏𝙎", level: 85 },
     ],
     backend: [
-      { name: "Node.js", icon: "📦", level: 85 },
-      { name: "Express", icon: "🚂", level: 80 },
-      { name: "MongoDB", icon: "🍃", level: 75 },
+      { name: "Node.js", icon: "/lovable-uploads/889f3151-9e02-4886-b2ca-65e4ea6b9698.png", level: 85 },
+      { name: "Express", icon: "/lovable-uploads/3f4c6814-48a4-425e-a580-f4f6d5629658.png", level: 80 },
+      { name: "MongoDB", icon: "/lovable-uploads/63833d84-5d55-4a10-8275-7849dad08ea3.png", level: 75 },
       { name: "MySQL", icon: "📊", level: 70 },
       { name: "NoSQL", icon: "🗄️", level: 75 },
     ],
     tools: [
-      { name: "Git", icon: "📚", level: 85 },
-      { name: "GitHub", icon: "🐙", level: 90 },
-      { name: "VS Code", icon: "📝", level: 90 },
-      { name: "Figma", icon: "🎨", level: 65 },
-    ],
-    dsa: [
-      { name: "Data Structures", icon: "🏗️", level: 90 },
-      { name: "Algorithms", icon: "⚙️", level: 85 },
-      { name: "Problem Solving", icon: "🧩", level: 90 },
+      { name: "Git", icon: "/lovable-uploads/43e72617-a197-4744-a8d0-4f35848d9a1e.png", level: 85 },
+      { name: "GitHub", icon: "/lovable-uploads/4355ecb6-bd1c-4ec7-99d5-a222acffcad5.png", level: 90 },
+      { name: "VS Code", icon: "/lovable-uploads/0593fccd-1b5a-4568-8755-10fc518fc8ef.png", level: 90 },
+      { name: "Figma", icon: "/lovable-uploads/083b0217-1994-40d3-ba8b-a084b3ef621a.png", level: 65 },
     ],
   };
 
@@ -78,7 +72,6 @@ const SkillsSection = () => {
         {renderSkillCategory("Frontend Development", skills.frontend)}
         {renderSkillCategory("Backend Development", skills.backend)}
         {renderSkillCategory("Tools & Technologies", skills.tools)}
-        {renderSkillCategory("DSA & Problem Solving", skills.dsa)}
       </div>
     </section>
   );

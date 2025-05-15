@@ -2,9 +2,19 @@
 import { useState } from "react";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog";
+import { Github, ExternalLink } from "lucide-react";
 
 const ProjectsSection = () => {
   const [filter, setFilter] = useState("all");
+  const [selectedProject, setSelectedProject] = useState<any>(null);
   
   const projects = [
     {
@@ -15,7 +25,8 @@ const ProjectsSection = () => {
       categories: ["fullstack", "react", "nodejs"],
       technologies: ["React", "Node.js", "MongoDB", "Express", "Redux"],
       liveLink: "#",
-      codeLink: "#",
+      codeLink: "https://github.com/saisharan9886/stream-circle",
+      fullDescription: "Stream Circle is a comprehensive OTT rental platform built with the MERN stack. The platform allows users to rent streaming services for flexible durations ranging from hourly to yearly subscriptions. Users can also buy or sell access to streaming platforms in a secure environment. The application features a robust authentication system, payment integration, and a user-friendly interface for browsing available services. The platform includes a strong verification process to ensure all transactions are safe and legitimate."
     },
     {
       id: 2,
@@ -25,7 +36,8 @@ const ProjectsSection = () => {
       categories: ["fullstack", "react", "nodejs"],
       technologies: ["React", "Node.js", "MongoDB", "Express", "JWT"],
       liveLink: "#",
-      codeLink: "#",
+      codeLink: "https://github.com/saisharan9886/airbnb-clone",
+      fullDescription: "This Airbnb clone is built using the MERN stack and replicates the core functionality of the original platform. Users can create accounts, list properties, browse available listings, make bookings, and process payments. The application features a responsive design, interactive maps for property locations, search filters, user reviews, and a messaging system for hosts and guests. Authentication is handled with JWT tokens, and the database is optimized for efficient queries and scalability."
     },
     {
       id: 3,
@@ -35,7 +47,8 @@ const ProjectsSection = () => {
       categories: ["fullstack", "react"],
       technologies: ["React", "Node.js", "MongoDB", "Express", "Stripe"],
       liveLink: "#",
-      codeLink: "#",
+      codeLink: "https://github.com/saisharan9886/ecommerce-platform",
+      fullDescription: "This e-commerce platform provides a complete shopping experience from product browsing to checkout. Built with React for the frontend and Node.js/Express for the backend, it includes features like product categorization, search functionality, user reviews, wishlist, shopping cart, secure checkout with Stripe integration, and order tracking. The admin panel allows for inventory management, order processing, and sales analytics. The responsive design ensures a seamless experience across all devices."
     },
   ];
   
@@ -99,6 +112,7 @@ const ProjectsSection = () => {
                   variant="default"
                   size="sm"
                   className="bg-portfolio-blue hover:bg-portfolio-darkBlue"
+                  onClick={() => window.open(project.liveLink, '_blank')}
                 >
                   Live Demo
                 </Button>
@@ -106,13 +120,64 @@ const ProjectsSection = () => {
                   variant="outline" 
                   size="sm"
                   className="border-portfolio-blue text-portfolio-blue hover:bg-portfolio-blue hover:text-white"
+                  onClick={() => setSelectedProject(project)}
                 >
-                  View Code
+                  View Details
                 </Button>
               </CardFooter>
             </Card>
           ))}
         </div>
+
+        <Dialog open={!!selectedProject} onOpenChange={(open) => !open && setSelectedProject(null)}>
+          {selectedProject && (
+            <DialogContent className="sm:max-w-2xl">
+              <DialogHeader>
+                <DialogTitle className="text-2xl font-bold">{selectedProject.title}</DialogTitle>
+              </DialogHeader>
+              <div className="h-52 sm:h-64 overflow-hidden rounded-md mb-4">
+                <img 
+                  src={selectedProject.image} 
+                  alt={selectedProject.title} 
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <DialogDescription className="text-base text-gray-700 leading-relaxed">
+                {selectedProject.fullDescription}
+              </DialogDescription>
+              
+              <div className="mt-4">
+                <h4 className="font-medium mb-2">Technologies Used:</h4>
+                <div className="flex flex-wrap gap-2">
+                  {selectedProject.technologies.map((tech: string) => (
+                    <span key={tech} className="bg-portfolio-blue/10 text-portfolio-blue px-2 py-1 rounded text-sm">
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+              </div>
+              
+              <DialogFooter className="flex justify-end gap-2 mt-4">
+                <Button 
+                  variant="outline"
+                  size="sm"
+                  className="flex items-center gap-2"
+                  onClick={() => window.open(selectedProject.liveLink, '_blank')}
+                >
+                  <ExternalLink className="h-4 w-4" /> Live Demo
+                </Button>
+                <Button 
+                  variant="default"
+                  size="sm"
+                  className="bg-portfolio-darkBlue hover:bg-portfolio-blue flex items-center gap-2"
+                  onClick={() => window.open(selectedProject.codeLink, '_blank')}
+                >
+                  <Github className="h-4 w-4" /> View on GitHub
+                </Button>
+              </DialogFooter>
+            </DialogContent>
+          )}
+        </Dialog>
       </div>
     </section>
   );
