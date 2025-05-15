@@ -27,6 +27,16 @@ const HeroSection = () => {
     }
   };
 
+  const handleDownloadResume = () => {
+    // Use the profile image as a placeholder for resume download
+    const link = document.createElement('a');
+    link.href = "/lovable-uploads/0a5ad479-cd9c-462e-ac22-d0afa93119b4.png";
+    link.download = "P_Sai_Sharan_Resume.png";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <section id="home" className="min-h-screen flex items-center justify-center bg-gradient-to-br from-white to-blue-50">
       <div className="section-container flex flex-col md:flex-row items-center">
@@ -36,16 +46,18 @@ const HeroSection = () => {
             P. Sai Sharan
           </h1>
           
-          <div className="h-14">
-            <h2 className="text-2xl md:text-3xl font-medium text-portfolio-darkBlue mb-6 opacity-0 animate-slideUp" style={{animationDelay: '0.3s', animationFillMode: 'forwards'}}>
-              I'm a{" "}
-              <span className="text-portfolio-blue">
-                {roles[roleIndex]}
-              </span>
-            </h2>
+          <div className="h-14 relative">
+            <div className="absolute inset-0 flex items-center">
+              <h2 className="text-2xl md:text-3xl font-medium text-portfolio-darkBlue opacity-0 animate-slideUp" style={{animationDelay: '0.3s', animationFillMode: 'forwards'}}>
+                I'm a{" "}
+                <span className="text-portfolio-blue">
+                  {roles[roleIndex]}
+                </span>
+              </h2>
+            </div>
           </div>
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start mt-8 opacity-0 animate-slideUp" style={{animationDelay: '0.6s', animationFillMode: 'forwards'}}>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start mt-12 opacity-0 animate-slideUp" style={{animationDelay: '0.6s', animationFillMode: 'forwards'}}>
             <Button 
               onClick={scrollToAbout}
               className="bg-portfolio-blue hover:bg-portfolio-darkBlue text-white px-6 py-2"
@@ -55,6 +67,7 @@ const HeroSection = () => {
             <Button 
               variant="outline" 
               className="border-portfolio-blue text-portfolio-blue hover:bg-portfolio-blue hover:text-white"
+              onClick={handleDownloadResume}
             >
               Download Resume
             </Button>
