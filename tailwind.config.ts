@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,6 +62,15 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				portfolio: {
+					blue: '#2563eb',
+					darkBlue: '#1e40af',
+					lightBlue: '#60a5fa',
+					black: '#111827',
+					white: '#ffffff',
+					gray: '#9ca3af',
+					lightGray: '#f3f4f6',
 				}
 			},
 			borderRadius: {
@@ -84,11 +94,35 @@ export default {
 					to: {
 						height: '0'
 					}
-				}
+				},
+				typing: {
+					from: { width: '0' },
+					to: { width: '100%' }
+				},
+				blink: {
+					'0%, 100%': { opacity: '1' },
+					'50%': { opacity: '0' }
+				},
+				fadeIn: {
+					from: { opacity: '0', transform: 'translateY(10px)' },
+					to: { opacity: '1', transform: 'translateY(0)' }
+				},
+				slideUp: {
+					from: { opacity: '0', transform: 'translateY(20px)' },
+					to: { opacity: '1', transform: 'translateY(0)' }
+				},
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				typing: 'typing 3.5s steps(40, end)',
+				blink: 'blink 1s step-end infinite',
+				fadeIn: 'fadeIn 0.5s ease-out forwards',
+				slideUp: 'slideUp 0.6s ease-out forwards',
+			},
+			fontFamily: {
+				sans: ['Inter', 'sans-serif'],
+				mono: ['Roboto Mono', 'monospace'],
 			}
 		}
 	},
