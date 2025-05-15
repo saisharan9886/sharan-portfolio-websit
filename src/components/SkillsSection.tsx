@@ -4,12 +4,11 @@ import { Card, CardContent } from "@/components/ui/card";
 const SkillsSection = () => {
   const skills = {
     programming: [
-      { name: "C", icon: "🅒", level: 85 },
-      { name: "C++", icon: "🅒++", level: 80 },
-      { name: "Java", icon: "☕", level: 90 },
-      { name: "Python", icon: "🐍", level: 75 },
-      { name: "JavaScript", icon: "𝙅𝙎", level: 95 },
-      { name: "TypeScript", icon: "𝙏𝙎", level: 85 },
+      { name: "C", icon: "/lovable-uploads/b5e5ea3f-0cbe-4536-9617-a06a60e715a3.png", level: 85 },
+      { name: "C++", icon: "/lovable-uploads/1ad43561-9ec6-49d8-af1d-34f6f10ac090.png", level: 80 },
+      { name: "Java", icon: "/lovable-uploads/9c710d3f-3d02-4fb3-bd67-dccced76d8ef.png", level: 90 },
+      { name: "JavaScript", icon: "/lovable-uploads/a7dc259f-d605-4ef3-b689-e24cfa8cd49f.png", level: 95 },
+      { name: "Python", icon: "/lovable-uploads/cc8163fd-a0ad-4e38-a6c1-c62530fd5845.png", level: 75 },
     ],
     frontend: [
       { name: "React", icon: "⚛️", level: 90 },
@@ -47,14 +46,18 @@ const SkillsSection = () => {
           <Card key={skill.name} className="overflow-hidden border border-gray-200 hover:border-portfolio-blue transition-all hover:shadow-md">
             <CardContent className="p-4">
               <div className="text-center">
-                <div className="text-3xl mb-2">{skill.icon}</div>
+                {typeof skill.icon === 'string' && skill.icon.startsWith('/') ? (
+                  <div className="flex justify-center mb-2">
+                    <img 
+                      src={skill.icon} 
+                      alt={`${skill.name} icon`} 
+                      className="h-12 w-auto" 
+                    />
+                  </div>
+                ) : (
+                  <div className="text-3xl mb-2">{skill.icon}</div>
+                )}
                 <h4 className="text-base font-medium">{skill.name}</h4>
-                <div className="mt-2 h-1.5 w-full bg-gray-200 rounded-full">
-                  <div
-                    className="h-full bg-portfolio-blue rounded-full"
-                    style={{ width: `${skill.level}%` }}
-                  ></div>
-                </div>
               </div>
             </CardContent>
           </Card>
