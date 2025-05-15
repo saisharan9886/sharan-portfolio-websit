@@ -9,6 +9,7 @@ const SkillsSection = () => {
       { name: "Java", icon: "☕", level: 90 },
       { name: "Python", icon: "🐍", level: 75 },
       { name: "JavaScript", icon: "𝙅𝙎", level: 95 },
+      { name: "TypeScript", icon: "𝙏𝙎", level: 85 },
     ],
     frontend: [
       { name: "React", icon: "⚛️", level: 90 },
@@ -16,18 +17,20 @@ const SkillsSection = () => {
       { name: "CSS", icon: "🎨", level: 85 },
       { name: "JavaScript", icon: "𝙅𝙎", level: 95 },
       { name: "Bootstrap", icon: "🅱️", level: 80 },
+      { name: "TypeScript", icon: "𝙏𝙎", level: 85 },
     ],
     backend: [
       { name: "Node.js", icon: "📦", level: 85 },
       { name: "Express", icon: "🚂", level: 80 },
       { name: "MongoDB", icon: "🍃", level: 75 },
-      { name: "SQL", icon: "📊", level: 70 },
+      { name: "MySQL", icon: "📊", level: 70 },
+      { name: "NoSQL", icon: "🗄️", level: 75 },
     ],
     tools: [
       { name: "Git", icon: "📚", level: 85 },
+      { name: "GitHub", icon: "🐙", level: 90 },
       { name: "VS Code", icon: "📝", level: 90 },
       { name: "Figma", icon: "🎨", level: 65 },
-      { name: "Docker", icon: "🐳", level: 60 },
     ],
     dsa: [
       { name: "Data Structures", icon: "🏗️", level: 90 },

@@ -7,17 +7,25 @@ const EducationSection = () => {
       degree: "B.Tech in Computer Science Engineering",
       specialization: "Cyber Security",
       institution: "CMR Technical Campus",
-      duration: "2020 - 2024",
+      duration: "2022 - 2026",
       description: "Pursuing a bachelor's degree with a focus on computer science fundamentals, data structures, algorithms, and specialized cybersecurity courses.",
-      achievements: ["Dean's List for Academic Excellence", "Student Research Project Award", "Cybersecurity Hackathon Winner"]
+      achievements: ["Score: 8.03", "Dean's List for Academic Excellence"]
     },
     {
       degree: "Higher Secondary Education",
-      specialization: "Science Stream (PCM)",
-      institution: "Delhi Public School",
-      duration: "2018 - 2020",
-      description: "Completed higher secondary education with a focus on Physics, Chemistry, and Mathematics.",
-      achievements: ["School Topper in Mathematics", "Science Olympiad Finalist"]
+      specialization: "MPC (Mathematics, Physics, Chemistry)",
+      institution: "Narayana Junior College",
+      duration: "2020 - 2022",
+      description: "Completed higher secondary education with a focus on Mathematics, Physics, and Chemistry.",
+      achievements: ["Score: 936"]
+    },
+    {
+      degree: "Secondary Education",
+      specialization: "",
+      institution: "Nava Jyothi High School",
+      duration: "2020",
+      description: "Completed secondary education with focus on fundamental subjects.",
+      achievements: ["Score: 9.5"]
     },
   ];
 
@@ -62,7 +70,7 @@ const EducationSection = () => {
                   <div className="flex flex-col md:flex-row justify-between">
                     <div>
                       <h4 className="text-xl font-bold text-portfolio-darkBlue">{item.degree}</h4>
-                      <p className="text-portfolio-blue">{item.specialization}</p>
+                      {item.specialization && <p className="text-portfolio-blue">{item.specialization}</p>}
                       <p className="text-gray-600 mt-1">{item.institution}</p>
                     </div>
                     <div className="mt-2 md:mt-0">
