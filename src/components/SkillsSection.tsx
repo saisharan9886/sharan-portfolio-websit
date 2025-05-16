@@ -30,12 +30,12 @@ const SkillsSection = () => {
     ],
   };
 
-  const renderSkillCategory = (title: string, skills: any[]) => (
+  const renderSkillCategory = (title, skills) => (
     <div className="mb-10 opacity-0 animate-slideUp" style={{animationDelay: '0.3s', animationFillMode: 'forwards'}}>
-      <h3 className="text-xl font-bold mb-4 text-[#1A1A1A]">{title}</h3>
+      <h3 className="text-xl font-bold mb-4 text-portfolio-text">{title}</h3>
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
         {skills.map((skill) => (
-          <Card key={skill.name} className="overflow-hidden border border-gray-200 hover:border-[#3A86FF] transition-all hover:shadow-md">
+          <Card key={skill.name} className="overflow-hidden border-0 bg-portfolio-card hover:border-portfolio-accent transition-all hover:shadow-md portfolio-card">
             <CardContent className="p-4">
               <div className="text-center">
                 {typeof skill.icon === 'string' && skill.icon.startsWith('/') ? (
@@ -49,7 +49,7 @@ const SkillsSection = () => {
                 ) : (
                   <div className="text-3xl mb-2">{skill.icon}</div>
                 )}
-                <h4 className="text-base font-medium text-[#1A1A1A]">{skill.name}</h4>
+                <h4 className="text-base font-medium text-portfolio-text">{skill.name}</h4>
               </div>
             </CardContent>
           </Card>
@@ -59,10 +59,10 @@ const SkillsSection = () => {
   );
 
   return (
-    <section id="skills" className="py-20 bg-white">
+    <section id="skills" className="py-20 bg-portfolio-dark">
       <div className="section-container">
-        <h2 className="section-title text-[#1A1A1A]">My Skills</h2>
-        <p className="text-center text-[#AAAAAA] mb-12 max-w-3xl mx-auto opacity-0 animate-slideUp" style={{animationDelay: '0.2s', animationFillMode: 'forwards'}}>
+        <h2 className="section-title text-portfolio-text">My Skills</h2>
+        <p className="text-center text-portfolio-secondary mb-12 max-w-3xl mx-auto opacity-0 animate-slideUp" style={{animationDelay: '0.2s', animationFillMode: 'forwards'}}>
           I have expertise in various technologies and tools that allow me to build complete and efficient web solutions. Here are my key skills grouped by category:
         </p>
 

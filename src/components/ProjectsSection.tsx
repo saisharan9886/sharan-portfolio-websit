@@ -14,7 +14,7 @@ import { Github } from "lucide-react";
 
 const ProjectsSection = () => {
   const [filter, setFilter] = useState("all");
-  const [selectedProject, setSelectedProject] = useState<any>(null);
+  const [selectedProject, setSelectedProject] = useState(null);
   
   const projects = [
     {
@@ -54,16 +54,13 @@ const ProjectsSection = () => {
     : projects.filter(project => project.categories.includes(filter));
     
   const categories = [
-    { value: "all", label: "All" },
-    { value: "fullstack", label: "Full Stack" },
-    { value: "react", label: "React" },
-    { value: "nodejs", label: "Node.js" },
+    { value: "all", label: "All Projects" },
   ];
 
   return (
-    <section id="projects" className="py-20 bg-white">
+    <section id="projects" className="py-20 bg-portfolio-dark">
       <div className="section-container">
-        <h2 className="section-title text-[#1A1A1A]">My Projects</h2>
+        <h2 className="section-title text-portfolio-text">My Projects</h2>
         
         <div className="flex justify-center flex-wrap gap-2 mb-10 opacity-0 animate-slideUp" style={{animationDelay: '0.2s', animationFillMode: 'forwards'}}>
           {categories.map((category) => (
@@ -71,7 +68,9 @@ const ProjectsSection = () => {
               key={category.value}
               variant={filter === category.value ? "default" : "outline"}
               onClick={() => setFilter(category.value)}
-              className={filter === category.value ? "mb-2 bg-[#3A86FF] hover:bg-[#3A86FF]/90" : "mb-2 text-[#1A1A1A] hover:text-[#3A86FF] hover:bg-[#E0F0FF] border-[#AAAAAA]"}
+              className={filter === category.value 
+                ? "mb-2 bg-portfolio-accent text-portfolio-dark hover:bg-portfolio-highlight" 
+                : "mb-2 text-portfolio-text hover:text-portfolio-accent hover:bg-portfolio-card/50 border-portfolio-secondary"}
             >
               {category.label}
             </Button>
@@ -80,7 +79,7 @@ const ProjectsSection = () => {
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
           {filteredProjects.map((project, index) => (
-            <Card key={project.id} className="overflow-hidden border border-gray-200 hover:border-[#3A86FF] transition-all hover:shadow-lg opacity-0 animate-slideUp" style={{animationDelay: `${0.3 + index * 0.1}s`, animationFillMode: 'forwards'}}>
+            <Card key={project.id} className="overflow-hidden border-0 bg-portfolio-card hover:border-portfolio-accent transition-all hover:shadow-lg opacity-0 animate-slideUp portfolio-card" style={{animationDelay: `${0.3 + index * 0.1}s`, animationFillMode: 'forwards'}}>
               <div className="h-48 overflow-hidden">
                 <img 
                   src={project.image} 
@@ -90,12 +89,12 @@ const ProjectsSection = () => {
               </div>
               
               <CardContent className="p-6">
-                <h3 className="text-xl font-bold mb-2 text-[#1A1A1A]">{project.title}</h3>
-                <p className="text-[#AAAAAA] mb-4 line-clamp-2">{project.description}</p>
+                <h3 className="text-xl font-bold mb-2 text-portfolio-text">{project.title}</h3>
+                <p className="text-portfolio-secondary mb-4 line-clamp-2">{project.description}</p>
                 
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.technologies.map((tech) => (
-                    <span key={tech} className="bg-[#E0F0FF] text-[#3A86FF] text-xs px-2 py-1 rounded">
+                    <span key={tech} className="bg-portfolio-dark text-portfolio-accent text-xs px-2 py-1 rounded">
                       {tech}
                     </span>
                   ))}
@@ -106,7 +105,7 @@ const ProjectsSection = () => {
                 <Button 
                   variant="outline" 
                   size="sm"
-                  className="border-[#3A86FF] text-[#3A86FF] hover:bg-[#E0F0FF] hover:text-[#3A86FF]"
+                  className="border-portfolio-accent text-portfolio-accent hover:bg-portfolio-accent/10 hover:text-portfolio-accent btn-glow"
                   onClick={() => setSelectedProject(project)}
                 >
                   View Details
@@ -118,9 +117,9 @@ const ProjectsSection = () => {
 
         <Dialog open={!!selectedProject} onOpenChange={(open) => !open && setSelectedProject(null)}>
           {selectedProject && (
-            <DialogContent className="sm:max-w-2xl">
+            <DialogContent className="sm:max-w-2xl bg-portfolio-card text-portfolio-text border-portfolio-accent/20">
               <DialogHeader>
-                <DialogTitle className="text-2xl font-bold text-[#1A1A1A]">{selectedProject.title}</DialogTitle>
+                <DialogTitle className="text-2xl font-bold text-portfolio-accent">{selectedProject.title}</DialogTitle>
               </DialogHeader>
               <div className="h-52 sm:h-64 overflow-hidden rounded-md mb-4">
                 <img 
@@ -129,15 +128,15 @@ const ProjectsSection = () => {
                   className="w-full h-full object-cover"
                 />
               </div>
-              <DialogDescription className="text-base text-[#1A1A1A] leading-relaxed">
+              <DialogDescription className="text-base text-portfolio-text leading-relaxed">
                 {selectedProject.fullDescription}
               </DialogDescription>
               
               <div className="mt-4">
-                <h4 className="font-medium mb-2 text-[#1A1A1A]">Technologies Used:</h4>
+                <h4 className="font-medium mb-2 text-portfolio-text">Technologies Used:</h4>
                 <div className="flex flex-wrap gap-2">
-                  {selectedProject.technologies.map((tech: string) => (
-                    <span key={tech} className="bg-[#E0F0FF] text-[#3A86FF] px-2 py-1 rounded text-sm">
+                  {selectedProject.technologies.map((tech) => (
+                    <span key={tech} className="bg-portfolio-dark text-portfolio-accent px-2 py-1 rounded text-sm">
                       {tech}
                     </span>
                   ))}
@@ -148,7 +147,7 @@ const ProjectsSection = () => {
                 <Button 
                   variant="default"
                   size="sm"
-                  className="bg-[#3A86FF] hover:bg-[#3A86FF]/90 flex items-center gap-2"
+                  className="bg-portfolio-accent hover:bg-portfolio-highlight text-portfolio-dark flex items-center gap-2 btn-glow"
                   onClick={() => window.open(selectedProject.codeLink, '_blank')}
                 >
                   <Github className="h-4 w-4" /> View on GitHub

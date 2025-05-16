@@ -17,7 +17,7 @@ const ContactSection = () => {
   
   const [loading, setLoading] = useState(false);
   
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
@@ -25,7 +25,7 @@ const ContactSection = () => {
     }));
   };
   
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     setLoading(true);
     
@@ -54,48 +54,48 @@ const ContactSection = () => {
   };
   
   return (
-    <section id="contact" className="py-20 bg-white">
+    <section id="contact" className="py-20 bg-portfolio-dark">
       <div className="section-container">
-        <h2 className="section-title text-[#1A1A1A]">Get In Touch</h2>
+        <h2 className="section-title text-portfolio-text">Get In Touch</h2>
         
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
           <div className="lg:col-span-1 opacity-0 animate-slideUp" style={{animationDelay: '0.2s', animationFillMode: 'forwards'}}>
-            <h3 className="text-xl font-bold mb-6 text-[#1A1A1A]">Let's Connect</h3>
-            <p className="text-[#AAAAAA] mb-8">
+            <h3 className="text-xl font-bold mb-6 text-portfolio-text">Let's Connect</h3>
+            <p className="text-portfolio-secondary mb-8">
               I'm currently open for new opportunities and collaborations. Feel free to reach out if you have a question or just want to say hi!
             </p>
             
             <div className="space-y-6">
               <div className="flex items-start">
-                <div className="w-10 h-10 rounded-full bg-[#E0F0FF] flex items-center justify-center text-[#3A86FF] mr-4">
+                <div className="w-10 h-10 rounded-full bg-portfolio-card flex items-center justify-center text-portfolio-accent mr-4">
                   <Mail className="h-5 w-5" />
                 </div>
                 <div>
-                  <p className="text-[#AAAAAA] text-sm">Email</p>
-                  <p className="font-medium text-[#1A1A1A]">paluttlasaisharan2k5@gmail.com</p>
+                  <p className="text-portfolio-secondary text-sm">Email</p>
+                  <p className="font-medium text-portfolio-text">paluttlasaisharan2k5@gmail.com</p>
                 </div>
               </div>
               
               <div className="flex items-start">
-                <div className="w-10 h-10 rounded-full bg-[#E0F0FF] flex items-center justify-center text-[#3A86FF] mr-4">
+                <div className="w-10 h-10 rounded-full bg-portfolio-card flex items-center justify-center text-portfolio-accent mr-4">
                   <MapPin className="h-5 w-5" />
                 </div>
                 <div>
-                  <p className="text-[#AAAAAA] text-sm">Location</p>
-                  <p className="font-medium text-[#1A1A1A]">Hyderabad, India</p>
+                  <p className="text-portfolio-secondary text-sm">Location</p>
+                  <p className="font-medium text-portfolio-text">Hyderabad, India</p>
                 </div>
               </div>
             </div>
           </div>
           
           <div className="lg:col-span-2 opacity-0 animate-slideUp" style={{animationDelay: '0.4s', animationFillMode: 'forwards'}}>
-            <Card className="border border-gray-200">
+            <Card className="border-0 bg-portfolio-card shadow-lg portfolio-card">
               <CardContent className="p-6">
-                <h3 className="text-xl font-bold mb-6 text-[#1A1A1A]">Send me a message</h3>
+                <h3 className="text-xl font-bold mb-6 text-portfolio-text">Send me a message</h3>
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div>
-                      <label htmlFor="name" className="block text-sm font-medium text-[#1A1A1A] mb-1">
+                    <div className="opacity-0 animate-slideUp stagger-1" style={{animationFillMode: 'forwards'}}>
+                      <label htmlFor="name" className="block text-sm font-medium text-portfolio-text mb-1">
                         Full Name
                       </label>
                       <Input
@@ -106,11 +106,11 @@ const ContactSection = () => {
                         value={formData.name}
                         onChange={handleChange}
                         required
-                        className="w-full border-gray-200 focus:border-[#3A86FF] focus:ring-[#3A86FF]"
+                        className="w-full border-portfolio-secondary/20 bg-portfolio-dark focus:border-portfolio-accent focus:ring-portfolio-accent text-portfolio-text"
                       />
                     </div>
-                    <div>
-                      <label htmlFor="email" className="block text-sm font-medium text-[#1A1A1A] mb-1">
+                    <div className="opacity-0 animate-slideUp stagger-2" style={{animationFillMode: 'forwards'}}>
+                      <label htmlFor="email" className="block text-sm font-medium text-portfolio-text mb-1">
                         Email Address
                       </label>
                       <Input
@@ -121,13 +121,13 @@ const ContactSection = () => {
                         value={formData.email}
                         onChange={handleChange}
                         required
-                        className="w-full border-gray-200 focus:border-[#3A86FF] focus:ring-[#3A86FF]"
+                        className="w-full border-portfolio-secondary/20 bg-portfolio-dark focus:border-portfolio-accent focus:ring-portfolio-accent text-portfolio-text"
                       />
                     </div>
                   </div>
                   
-                  <div>
-                    <label htmlFor="subject" className="block text-sm font-medium text-[#1A1A1A] mb-1">
+                  <div className="opacity-0 animate-slideUp stagger-3" style={{animationFillMode: 'forwards'}}>
+                    <label htmlFor="subject" className="block text-sm font-medium text-portfolio-text mb-1">
                       Subject
                     </label>
                     <Input
@@ -138,12 +138,12 @@ const ContactSection = () => {
                       value={formData.subject}
                       onChange={handleChange}
                       required
-                      className="w-full border-gray-200 focus:border-[#3A86FF] focus:ring-[#3A86FF]"
+                      className="w-full border-portfolio-secondary/20 bg-portfolio-dark focus:border-portfolio-accent focus:ring-portfolio-accent text-portfolio-text"
                     />
                   </div>
                   
-                  <div>
-                    <label htmlFor="message" className="block text-sm font-medium text-[#1A1A1A] mb-1">
+                  <div className="opacity-0 animate-slideUp stagger-4" style={{animationFillMode: 'forwards'}}>
+                    <label htmlFor="message" className="block text-sm font-medium text-portfolio-text mb-1">
                       Message
                     </label>
                     <Textarea
@@ -154,18 +154,20 @@ const ContactSection = () => {
                       onChange={handleChange}
                       required
                       rows={5}
-                      className="w-full border-gray-200 focus:border-[#3A86FF] focus:ring-[#3A86FF]"
+                      className="w-full border-portfolio-secondary/20 bg-portfolio-dark focus:border-portfolio-accent focus:ring-portfolio-accent text-portfolio-text"
                     />
                   </div>
                   
-                  <Button 
-                    type="submit" 
-                    disabled={loading}
-                    className="bg-[#3A86FF] hover:bg-[#3A86FF]/90 text-white w-full md:w-auto"
-                  >
-                    {loading ? "Sending..." : "Send Message"}
-                    <Send className="ml-2 h-4 w-4" />
-                  </Button>
+                  <div className="opacity-0 animate-slideUp stagger-5" style={{animationFillMode: 'forwards'}}>
+                    <Button 
+                      type="submit" 
+                      disabled={loading}
+                      className="bg-portfolio-accent hover:bg-portfolio-highlight text-portfolio-dark w-full md:w-auto btn-glow"
+                    >
+                      {loading ? "Sending..." : "Send Message"}
+                      <Send className="ml-2 h-4 w-4" />
+                    </Button>
+                  </div>
                 </form>
               </CardContent>
             </Card>

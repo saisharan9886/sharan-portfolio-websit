@@ -18,14 +18,12 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      // Update navbar style based on scroll position
       if (window.scrollY > 50) {
         setScrolled(true);
       } else {
         setScrolled(false);
       }
 
-      // Update active section based on scroll position
       const sectionElements = sections.map(section => ({
         id: section.id,
         element: document.getElementById(section.id),
@@ -46,10 +44,10 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const scrollToSection = (sectionId: string) => {
+  const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId);
     if (element) {
-      const offset = 80; // Offset for fixed navbar
+      const offset = 80;
       const elementPosition = element.getBoundingClientRect().top;
       const offsetPosition = elementPosition + window.pageYOffset - offset;
 
@@ -66,30 +64,28 @@ const Navbar = () => {
     <header 
       className={`fixed w-full z-50 transition-all duration-300 ${
         scrolled 
-          ? "bg-white/90 backdrop-blur-sm shadow-md py-2" 
+          ? "bg-portfolio-dark/90 backdrop-blur-sm shadow-md py-2" 
           : "bg-transparent py-4"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center">
-          <div className="text-xl font-bold text-[#3A86FF]">
+          <div className="text-xl font-bold text-portfolio-accent">
             P.Sai Sharan
           </div>
 
-          {/* Mobile menu button */}
           <button 
             className="md:hidden p-2" 
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label="Toggle menu"
           >
             <div className="w-6 flex flex-col gap-1.5">
-              <span className={`block h-0.5 w-full bg-[#1A1A1A] transition-all duration-300 ${mobileMenuOpen ? "rotate-45 translate-y-2" : ""}`}></span>
-              <span className={`block h-0.5 w-full bg-[#1A1A1A] transition-all duration-300 ${mobileMenuOpen ? "opacity-0" : ""}`}></span>
-              <span className={`block h-0.5 w-full bg-[#1A1A1A] transition-all duration-300 ${mobileMenuOpen ? "-rotate-45 -translate-y-2" : ""}`}></span>
+              <span className={`block h-0.5 w-full bg-portfolio-text transition-all duration-300 ${mobileMenuOpen ? "rotate-45 translate-y-2" : ""}`}></span>
+              <span className={`block h-0.5 w-full bg-portfolio-text transition-all duration-300 ${mobileMenuOpen ? "opacity-0" : ""}`}></span>
+              <span className={`block h-0.5 w-full bg-portfolio-text transition-all duration-300 ${mobileMenuOpen ? "-rotate-45 -translate-y-2" : ""}`}></span>
             </div>
           </button>
 
-          {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-1">
             {sections.map((section) => (
               <Button
@@ -98,8 +94,8 @@ const Navbar = () => {
                 onClick={() => scrollToSection(section.id)}
                 className={`transition-all ${
                   activeSection === section.id
-                    ? "bg-[#3A86FF] text-white"
-                    : "text-[#1A1A1A] hover:text-[#3A86FF]"
+                    ? "bg-portfolio-accent text-portfolio-dark"
+                    : "text-portfolio-text hover:text-portfolio-accent hover:bg-portfolio-card/50"
                 }`}
               >
                 {section.label}
@@ -109,9 +105,8 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Mobile Navigation */}
       <div
-        className={`md:hidden absolute top-full left-0 w-full bg-white shadow-lg transition-all duration-300 ${
+        className={`md:hidden absolute top-full left-0 w-full bg-portfolio-card shadow-lg transition-all duration-300 ${
           mobileMenuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0 pointer-events-none"
         } overflow-hidden`}
       >
@@ -123,8 +118,8 @@ const Navbar = () => {
               onClick={() => scrollToSection(section.id)}
               className={`w-full justify-start transition-all ${
                 activeSection === section.id
-                  ? "bg-[#3A86FF] text-white"
-                  : "text-[#1A1A1A] hover:text-[#3A86FF]"
+                  ? "bg-portfolio-accent text-portfolio-dark"
+                  : "text-portfolio-text hover:text-portfolio-accent hover:bg-portfolio-card/50"
               }`}
             >
               {section.label}

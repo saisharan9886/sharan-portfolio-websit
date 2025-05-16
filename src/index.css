@@ -1,5 +1,5 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Roboto+Mono:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto+Mono:wght@400;500;600&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -35,37 +35,7 @@
     --input: 214.3 31.8% 91.4%;
     --ring: 221.2 83.2% 53.3%;
 
-    --radius: 0.5rem;
-  }
-
-  .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
+    --radius: 0.75rem;
   }
 }
 
@@ -75,8 +45,9 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-portfolio-dark text-portfolio-text;
     scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
   }
 
   html {
@@ -84,34 +55,27 @@
   }
 }
 
-/* Updated section-title without the blue line */
+/* Section title styling */
 .section-title {
-  @apply text-3xl md:text-4xl font-bold mb-6 md:mb-12 text-center relative;
+  @apply text-3xl md:text-4xl font-bold mb-6 md:mb-12 text-center relative text-portfolio-text;
 }
 
 .section-container {
   @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24;
 }
 
-/* Custom color theme classes based on the Minimalist Monochrome with Soft Accent */
-.text-portfolio-primary {
-  @apply text-[#3A86FF];
+/* Custom card styling with soft shadows */
+.portfolio-card {
+  @apply bg-portfolio-card rounded-xl shadow-lg transition-all duration-300;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
-.bg-portfolio-primary {
-  @apply bg-[#3A86FF];
-}
-
-.text-portfolio-text {
-  @apply text-[#1A1A1A];
-}
-
-.text-portfolio-secondary {
-  @apply text-[#AAAAAA];
-}
-
-.bg-portfolio-light {
-  @apply bg-[#E0F0FF];
+/* Button effects */
+.btn-glow {
+  @apply transition-all duration-300 hover:shadow-lg;
+  &:hover {
+    box-shadow: 0 0 15px rgba(253, 203, 110, 0.6);
+  }
 }
 
 /* Enhanced animations */
@@ -160,29 +124,27 @@
   animation: pulse 3s ease-in-out infinite;
 }
 
-/* Card styling */
-.project-card {
-  @apply transition-all duration-300 hover:shadow-lg hover:border-[#3A86FF]/40;
-}
-
-.glass-effect {
-  @apply bg-white/70 backdrop-blur-sm border border-white/20 shadow-md;
-}
-
 /* Custom scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #f1f1f1;
+  background: #0E0E0E;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #AAAAAA;
+  background: #FDCB6E;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #3A86FF;
+  background: #FFD60A;
 }
+
+/* Staggered animation delays */
+.stagger-1 { animation-delay: 0.1s; }
+.stagger-2 { animation-delay: 0.2s; }
+.stagger-3 { animation-delay: 0.3s; }
+.stagger-4 { animation-delay: 0.4s; }
+.stagger-5 { animation-delay: 0.5s; }

@@ -64,13 +64,12 @@ export default {
 					ring: 'hsl(var(--sidebar-ring))'
 				},
 				portfolio: {
-					blue: '#2563eb',
-					darkBlue: '#1e40af',
-					lightBlue: '#60a5fa',
-					black: '#111827',
-					white: '#ffffff',
-					gray: '#9ca3af',
-					lightGray: '#f3f4f6',
+					dark: '#0E0E0E',        // Background
+					text: '#FFFFFF',         // Primary text
+					secondary: '#AAAAAA',    // Secondary text
+					accent: '#FDCB6E',       // Accent color
+					highlight: '#FFD60A',    // Button hover/highlight
+					card: '#1A1A1A',         // Section containers/cards
 				}
 			},
 			borderRadius: {
@@ -111,6 +110,10 @@ export default {
 					from: { opacity: '0', transform: 'translateY(20px)' },
 					to: { opacity: '1', transform: 'translateY(0)' }
 				},
+				glow: {
+					'0%, 100%': { boxShadow: '0 0 5px 2px rgba(253, 203, 110, 0.3)' },
+					'50%': { boxShadow: '0 0 15px 5px rgba(253, 203, 110, 0.5)' }
+				},
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
@@ -119,9 +122,10 @@ export default {
 				blink: 'blink 1s step-end infinite',
 				fadeIn: 'fadeIn 0.5s ease-out forwards',
 				slideUp: 'slideUp 0.6s ease-out forwards',
+				glow: 'glow 2s ease-in-out infinite',
 			},
 			fontFamily: {
-				sans: ['Inter', 'sans-serif'],
+				sans: ['Poppins', 'sans-serif'],
 				mono: ['Roboto Mono', 'monospace'],
 			}
 		}

@@ -3,32 +3,32 @@ import { Github, Linkedin, Twitter, Instagram } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#1A1A1A] text-white py-12">
+    <footer className="bg-portfolio-card text-portfolio-text py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-4 md:mb-0">
             <h2 className="text-2xl font-bold">P. Sai Sharan</h2>
-            <p className="text-[#AAAAAA]">Full Stack Developer | MERN Stack Specialist</p>
+            <p className="text-portfolio-secondary">Full Stack Developer | MERN Stack Specialist</p>
           </div>
           
           <div className="flex space-x-4 mb-4 md:mb-0">
-            <a href="https://www.linkedin.com/in/saisharan-paluttla-449ab9258/" target="_blank" rel="noopener noreferrer" className="text-[#AAAAAA] hover:text-white transition-colors">
+            <a href="https://www.linkedin.com/in/saisharan-paluttla-449ab9258/" target="_blank" rel="noopener noreferrer" className="text-portfolio-secondary hover:text-portfolio-accent transition-colors">
               <Linkedin size={20} />
             </a>
-            <a href="https://github.com/saisharan9886" target="_blank" rel="noopener noreferrer" className="text-[#AAAAAA] hover:text-white transition-colors">
+            <a href="https://github.com/saisharan9886" target="_blank" rel="noopener noreferrer" className="text-portfolio-secondary hover:text-portfolio-accent transition-colors">
               <Github size={20} />
             </a>
-            <a href="https://x.com/SaiSharan49216" target="_blank" rel="noopener noreferrer" className="text-[#AAAAAA] hover:text-white transition-colors">
+            <a href="https://x.com/SaiSharan49216" target="_blank" rel="noopener noreferrer" className="text-portfolio-secondary hover:text-portfolio-accent transition-colors">
               <Twitter size={20} />
             </a>
-            <a href="https://www.instagram.com/__sharan__0704/" target="_blank" rel="noopener noreferrer" className="text-[#AAAAAA] hover:text-white transition-colors">
+            <a href="https://www.instagram.com/__sharan__0704/" target="_blank" rel="noopener noreferrer" className="text-portfolio-secondary hover:text-portfolio-accent transition-colors">
               <Instagram size={20} />
             </a>
           </div>
         </div>
         
-        <div className="border-t border-white/10 mt-6 pt-6 text-center">
-          <p className="text-[#AAAAAA] text-sm">
+        <div className="border-t border-portfolio-secondary/10 mt-6 pt-6 text-center">
+          <p className="text-portfolio-secondary text-sm">
             © {new Date().getFullYear()} All rights reserved.
           </p>
         </div>
