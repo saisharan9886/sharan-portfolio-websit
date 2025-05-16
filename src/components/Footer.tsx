@@ -1,16 +1,7 @@
 
-import { Button } from "@/components/ui/button";
-import { ArrowUp } from "lucide-react";
 import { Github, Linkedin, Twitter, Instagram } from "lucide-react";
 
 const Footer = () => {
-  const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
-  };
-
   return (
     <footer className="bg-[#1A1A1A] text-white py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -18,17 +9,6 @@ const Footer = () => {
           <div className="mb-4 md:mb-0">
             <h2 className="text-2xl font-bold">P. Sai Sharan</h2>
             <p className="text-[#AAAAAA]">Full Stack Developer | MERN Stack Specialist</p>
-          </div>
-          
-          <div>
-            <Button 
-              onClick={scrollToTop} 
-              variant="outline" 
-              size="icon"
-              className="bg-transparent border border-white/20 hover:bg-white/10 text-white rounded-full"
-            >
-              <ArrowUp className="h-5 w-5" />
-            </Button>
           </div>
           
           <div className="flex space-x-4 mb-4 md:mb-0">

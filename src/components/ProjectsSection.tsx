@@ -56,8 +56,6 @@ const ProjectsSection = () => {
   const categories = [
     { value: "all", label: "All" },
     { value: "fullstack", label: "Full Stack" },
-    { value: "frontend", label: "Frontend" },
-    { value: "backend", label: "Backend" },
     { value: "react", label: "React" },
     { value: "nodejs", label: "Node.js" },
   ];
@@ -93,7 +91,7 @@ const ProjectsSection = () => {
               
               <CardContent className="p-6">
                 <h3 className="text-xl font-bold mb-2 text-[#1A1A1A]">{project.title}</h3>
-                <p className="text-[#AAAAAA] mb-4">{project.description}</p>
+                <p className="text-[#AAAAAA] mb-4 line-clamp-2">{project.description}</p>
                 
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.technologies.map((tech) => (

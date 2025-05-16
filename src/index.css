@@ -92,7 +92,7 @@
   @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24;
 }
 
-/* Custom color theme classes */
+/* Custom color theme classes based on the Minimalist Monochrome with Soft Accent */
 .text-portfolio-primary {
   @apply text-[#3A86FF];
 }

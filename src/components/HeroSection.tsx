@@ -89,7 +89,7 @@ const HeroSection = () => {
           <div className="md:w-1/2 flex justify-center opacity-0 animate-slideUp" style={{animationDelay: '0.3s', animationFillMode: 'forwards'}}>
             <div className="w-64 h-64 md:w-80 md:h-80 overflow-hidden rounded-full border-4 border-[#3A86FF]/20 shadow-xl">
               <img 
-                src="/lovable-uploads/304d7f08-5105-4c30-a891-3191c3500761.png" 
+                src="/lovable-uploads/31be7720-576a-44f1-9de0-1dd61f16b256.png" 
                 alt="P. Sai Sharan" 
                 className="w-full h-full object-cover"
               />
