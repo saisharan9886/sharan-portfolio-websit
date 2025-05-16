@@ -10,14 +10,14 @@ const AboutSection = () => {
   return (
     <section id="about" className="py-20 bg-white">
       <div className="section-container">
-        <h2 className="section-title">About Me</h2>
+        <h2 className="section-title text-[#1A1A1A]">About Me</h2>
         
         <div className="max-w-3xl mx-auto">
           <div className="flex mb-6 gap-1 border-b border-gray-200 opacity-0 animate-slideUp" style={{animationDelay: '0.4s', animationFillMode: 'forwards'}}>
             <Button
               variant={activeTab === "about" ? "default" : "ghost"}
               onClick={() => setActiveTab("about")}
-              className="rounded-b-none rounded-t-lg"
+              className={activeTab === "about" ? "rounded-b-none rounded-t-lg bg-[#3A86FF]" : "rounded-b-none rounded-t-lg text-[#1A1A1A]"}
             >
               <User className="mr-2 h-4 w-4" />
               About
@@ -25,7 +25,7 @@ const AboutSection = () => {
             <Button
               variant={activeTab === "experience" ? "default" : "ghost"}
               onClick={() => setActiveTab("experience")}
-              className="rounded-b-none rounded-t-lg"
+              className={activeTab === "experience" ? "rounded-b-none rounded-t-lg bg-[#3A86FF]" : "rounded-b-none rounded-t-lg text-[#1A1A1A]"}
             >
               <Briefcase className="mr-2 h-4 w-4" />
               Experience
@@ -33,7 +33,7 @@ const AboutSection = () => {
             <Button
               variant={activeTab === "contact" ? "default" : "ghost"}
               onClick={() => setActiveTab("contact")}
-              className="rounded-b-none rounded-t-lg"
+              className={activeTab === "contact" ? "rounded-b-none rounded-t-lg bg-[#3A86FF]" : "rounded-b-none rounded-t-lg text-[#1A1A1A]"}
             >
               <Phone className="mr-2 h-4 w-4" />
               Contact
@@ -44,13 +44,13 @@ const AboutSection = () => {
             {activeTab === "about" && (
               <Card className="border-0 shadow-none">
                 <CardContent className="pt-6 px-0">
-                  <p className="text-gray-700 leading-relaxed">
+                  <p className="text-[#1A1A1A] leading-relaxed">
                     Hello! I'm P. Sai Sharan, a passionate Developer with a strong foundation in full-stack development. I specialize in building responsive and user-friendly web applications using modern technologies.
                   </p>
-                  <p className="text-gray-700 leading-relaxed mt-4">
+                  <p className="text-[#1A1A1A] leading-relaxed mt-4">
                     Currently pursuing Computer Science Engineering with a focus on Cyber Security at CMR Technical Campus, I combine my academic knowledge with practical development skills to create innovative solutions.
                   </p>
-                  <p className="text-gray-700 leading-relaxed mt-4">
+                  <p className="text-[#1A1A1A] leading-relaxed mt-4">
                     I enjoy tackling complex problems and am always eager to learn new technologies and methodologies to enhance my development capabilities.
                   </p>
                 </CardContent>
@@ -61,11 +61,11 @@ const AboutSection = () => {
               <Card className="border-0 shadow-none">
                 <CardContent className="pt-6 px-0">
                   <div className="space-y-6">
-                    <div className="border-l-2 border-portfolio-blue pl-4 pb-6">
-                      <p className="text-sm text-portfolio-gray">2022 - Present</p>
-                      <h3 className="text-xl font-medium">Full Stack Developer</h3>
-                      <p className="text-portfolio-blue">Freelance</p>
-                      <p className="mt-2 text-gray-700">Developing responsive web applications using the MERN stack. Building custom solutions for clients across various industries.</p>
+                    <div className="border-l-2 border-[#3A86FF] pl-4 pb-6">
+                      <p className="text-sm text-[#AAAAAA]">2022 - Present</p>
+                      <h3 className="text-xl font-medium text-[#1A1A1A]">Full Stack Developer</h3>
+                      <p className="text-[#3A86FF]">Freelance</p>
+                      <p className="mt-2 text-[#1A1A1A]">Developing responsive web applications using the MERN stack. Building custom solutions for clients across various industries.</p>
                     </div>
                   </div>
                 </CardContent>
@@ -77,37 +77,37 @@ const AboutSection = () => {
                 <CardContent className="pt-6 px-0">
                   <div className="space-y-4">
                     <div className="flex items-center">
-                      <div className="w-12 h-12 rounded-full bg-portfolio-blue/10 flex items-center justify-center text-portfolio-blue mr-4">
+                      <div className="w-12 h-12 rounded-full bg-[#E0F0FF] flex items-center justify-center text-[#3A86FF] mr-4">
                         <Phone className="h-5 w-5" />
                       </div>
                       <div>
-                        <p className="text-gray-600 text-sm">Phone</p>
-                        <p className="font-medium">+91 7013968751</p>
+                        <p className="text-[#AAAAAA] text-sm">Phone</p>
+                        <p className="font-medium text-[#1A1A1A]">+91 7013968751</p>
                       </div>
                     </div>
                     
                     <div className="flex items-center">
-                      <div className="w-12 h-12 rounded-full bg-portfolio-blue/10 flex items-center justify-center text-portfolio-blue mr-4">
+                      <div className="w-12 h-12 rounded-full bg-[#E0F0FF] flex items-center justify-center text-[#3A86FF] mr-4">
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                           <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
                           <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
                         </svg>
                       </div>
                       <div>
-                        <p className="text-gray-600 text-sm">Email</p>
-                        <p className="font-medium">paluttlasaisharan2k5@gmail.com</p>
+                        <p className="text-[#AAAAAA] text-sm">Email</p>
+                        <p className="font-medium text-[#1A1A1A]">paluttlasaisharan2k5@gmail.com</p>
                       </div>
                     </div>
                     
                     <div className="flex items-center">
-                      <div className="w-12 h-12 rounded-full bg-portfolio-blue/10 flex items-center justify-center text-portfolio-blue mr-4">
+                      <div className="w-12 h-12 rounded-full bg-[#E0F0FF] flex items-center justify-center text-[#3A86FF] mr-4">
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                           <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
                         </svg>
                       </div>
                       <div>
-                        <p className="text-gray-600 text-sm">Location</p>
-                        <p className="font-medium">Hyderabad, India</p>
+                        <p className="text-[#AAAAAA] text-sm">Location</p>
+                        <p className="font-medium text-[#1A1A1A]">Hyderabad, India</p>
                       </div>
                     </div>
                   </div>
