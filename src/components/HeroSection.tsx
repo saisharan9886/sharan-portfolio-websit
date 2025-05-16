@@ -6,10 +6,10 @@ import { ArrowDown } from "lucide-react";
 const HeroSection = () => {
   const [roleIndex, setRoleIndex] = useState(0);
   const roles = [
+    "UI/UX Designer",
     "Front End Developer",
     "Backend Developer", 
-    "Full Stack Developer", 
-    "UI/UX Designer"
+    "Full Stack Developer"
   ];
 
   useEffect(() => {
@@ -29,7 +29,7 @@ const HeroSection = () => {
 
   const handleDownloadResume = () => {
     const link = document.createElement('a');
-    link.href = "/lovable-uploads/304d7f08-5105-4c30-a891-3191c3500761.png";
+    link.href = "/lovable-uploads/31be7720-576a-44f1-9de0-1dd61f16b256.png";
     link.download = "P_Sai_Sharan_Resume.png";
     document.body.appendChild(link);
     link.click();
@@ -37,20 +37,20 @@ const HeroSection = () => {
   };
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center bg-white">
+    <section id="home" className="min-h-screen flex items-center bg-gradient-to-br from-white to-[#E0F0FF]/30">
       <div className="section-container">
         <div className="flex flex-col md:flex-row items-center justify-between">
-          <div className="md:w-1/2 text-center md:text-left mb-10 md:mb-0">
-            <div className="mb-4">
+          <div className="md:w-1/2 text-left mb-10 md:mb-0 order-2 md:order-1">
+            <div className="mb-4 opacity-0 animate-slideUp" style={{animationDelay: '0.1s', animationFillMode: 'forwards'}}>
               <p className="text-lg text-[#3A86FF] font-medium mb-2">Hi, I'm</p>
-              <h1 className="text-4xl md:text-5xl lg:text-5xl font-bold text-[#1A1A1A] whitespace-nowrap">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#1A1A1A]">
                 P. Sai Sharan
               </h1>
             </div>
             
-            <div className="h-14 relative mb-8">
+            <div className="h-14 relative mb-8 opacity-0 animate-slideUp" style={{animationDelay: '0.3s', animationFillMode: 'forwards'}}>
               <div className="absolute inset-0 flex items-center">
-                <h2 className="text-2xl md:text-3xl font-medium text-[#1A1A1A] opacity-0 animate-slideUp" style={{animationDelay: '0.3s', animationFillMode: 'forwards'}}>
+                <h2 className="text-2xl md:text-3xl font-medium text-[#1A1A1A]">
                   I'm a{" "}
                   <span className="text-[#3A86FF]">
                     {roles[roleIndex]}
@@ -59,7 +59,7 @@ const HeroSection = () => {
               </div>
             </div>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start mt-8 opacity-0 animate-slideUp" style={{animationDelay: '0.6s', animationFillMode: 'forwards'}}>
+            <div className="flex flex-col sm:flex-row gap-4 justify-start mt-8 opacity-0 animate-slideUp" style={{animationDelay: '0.5s', animationFillMode: 'forwards'}}>
               <Button 
                 onClick={scrollToAbout}
                 className="bg-[#3A86FF] hover:bg-[#3A86FF]/90 text-white px-6 py-2 rounded-full"
@@ -75,7 +75,7 @@ const HeroSection = () => {
               </Button>
             </div>
             
-            <div className="mt-12 hidden md:block opacity-0 animate-slideUp" style={{animationDelay: '0.9s', animationFillMode: 'forwards'}}>
+            <div className="mt-12 opacity-0 animate-slideUp" style={{animationDelay: '0.7s', animationFillMode: 'forwards'}}>
               <Button
                 variant="ghost" 
                 onClick={scrollToAbout}
@@ -86,8 +86,8 @@ const HeroSection = () => {
             </div>
           </div>
           
-          <div className="md:w-1/2 flex justify-center opacity-0 animate-slideUp" style={{animationDelay: '0.3s', animationFillMode: 'forwards'}}>
-            <div className="w-64 h-64 md:w-80 md:h-80 overflow-hidden rounded-full border-4 border-[#3A86FF]/20 shadow-xl">
+          <div className="md:w-1/2 flex justify-center order-1 md:order-2 opacity-0 animate-fadeIn" style={{animationDelay: '0.3s', animationFillMode: 'forwards'}}>
+            <div className="w-64 h-64 md:w-80 md:h-80 overflow-hidden rounded-full border-4 border-[#3A86FF]/20 shadow-xl bg-gradient-to-br from-[#E0F0FF] to-white">
               <img 
                 src="/lovable-uploads/31be7720-576a-44f1-9de0-1dd61f16b256.png" 
                 alt="P. Sai Sharan" 

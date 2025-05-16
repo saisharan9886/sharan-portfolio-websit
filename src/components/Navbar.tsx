@@ -72,7 +72,7 @@ const Navbar = () => {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center">
-          <div className="text-xl font-bold text-portfolio-blue">
+          <div className="text-xl font-bold text-[#3A86FF]">
             P.Sai Sharan
           </div>
 
@@ -80,11 +80,12 @@ const Navbar = () => {
           <button 
             className="md:hidden p-2" 
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            aria-label="Toggle menu"
           >
             <div className="w-6 flex flex-col gap-1.5">
-              <span className={`block h-0.5 w-full bg-portfolio-black transition-all duration-300 ${mobileMenuOpen ? "rotate-45 translate-y-2" : ""}`}></span>
-              <span className={`block h-0.5 w-full bg-portfolio-black transition-all duration-300 ${mobileMenuOpen ? "opacity-0" : ""}`}></span>
-              <span className={`block h-0.5 w-full bg-portfolio-black transition-all duration-300 ${mobileMenuOpen ? "-rotate-45 -translate-y-2" : ""}`}></span>
+              <span className={`block h-0.5 w-full bg-[#1A1A1A] transition-all duration-300 ${mobileMenuOpen ? "rotate-45 translate-y-2" : ""}`}></span>
+              <span className={`block h-0.5 w-full bg-[#1A1A1A] transition-all duration-300 ${mobileMenuOpen ? "opacity-0" : ""}`}></span>
+              <span className={`block h-0.5 w-full bg-[#1A1A1A] transition-all duration-300 ${mobileMenuOpen ? "-rotate-45 -translate-y-2" : ""}`}></span>
             </div>
           </button>
 
@@ -97,8 +98,8 @@ const Navbar = () => {
                 onClick={() => scrollToSection(section.id)}
                 className={`transition-all ${
                   activeSection === section.id
-                    ? "text-white"
-                    : "text-portfolio-black hover:text-portfolio-blue"
+                    ? "bg-[#3A86FF] text-white"
+                    : "text-[#1A1A1A] hover:text-[#3A86FF]"
                 }`}
               >
                 {section.label}
@@ -122,8 +123,8 @@ const Navbar = () => {
               onClick={() => scrollToSection(section.id)}
               className={`w-full justify-start transition-all ${
                 activeSection === section.id
-                  ? "text-white"
-                  : "text-portfolio-black hover:text-portfolio-blue"
+                  ? "bg-[#3A86FF] text-white"
+                  : "text-[#1A1A1A] hover:text-[#3A86FF]"
               }`}
             >
               {section.label}
