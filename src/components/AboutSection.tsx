@@ -8,11 +8,11 @@ const AboutSection = () => {
   const [activeTab, setActiveTab] = useState("about");
   
   return (
-    <section id="about" className="py-20 bg-portfolio-dark">
-      <div className="section-container">
+    <section id="about" className="min-h-screen py-20 flex items-center bg-portfolio-dark">
+      <div className="w-full px-4 sm:px-6 lg:px-8 max-w-8xl mx-auto">
         <h2 className="section-title text-portfolio-text">About Me</h2>
         
-        <div className="max-w-3xl mx-auto">
+        <div className="max-w-4xl mx-auto">
           <div className="flex mb-6 gap-1 border-b border-portfolio-card opacity-0 animate-slideUp" style={{animationDelay: '0.4s', animationFillMode: 'forwards'}}>
             <Button
               variant={activeTab === "about" ? "default" : "ghost"}

@@ -35,7 +35,7 @@ const ContactSection = () => {
       `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
     );
     
-    // Open email client
+    // Open email client with the specified email address
     window.location.href = `mailto:paluttlasaisharan2k5@gmail.com?subject=${emailSubject}&body=${emailBody}`;
     
     // Show success message
@@ -55,7 +55,7 @@ const ContactSection = () => {
   
   return (
     <section id="contact" className="py-20 bg-portfolio-dark">
-      <div className="section-container">
+      <div className="w-full px-4 sm:px-6 lg:px-8 max-w-8xl mx-auto py-16 md:py-24">
         <h2 className="section-title text-portfolio-text">Get In Touch</h2>
         
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">

@@ -29,7 +29,7 @@ const HeroSection = () => {
 
   const handleDownloadResume = () => {
     const link = document.createElement('a');
-    link.href = "/lovable-uploads/31be7720-576a-44f1-9de0-1dd61f16b256.png";
+    link.href = "/lovable-uploads/ada8eb52-caf3-4c5a-a3c5-66fdcb000d66.png";
     link.download = "P_Sai_Sharan_Resume.png";
     document.body.appendChild(link);
     link.click();
@@ -38,9 +38,9 @@ const HeroSection = () => {
 
   return (
     <section id="home" className="min-h-screen flex items-center bg-portfolio-dark">
-      <div className="section-container">
-        <div className="flex flex-col md:flex-row items-center justify-between">
-          <div className="md:w-1/2 text-left mb-10 md:mb-0 order-1 md:order-1">
+      <div className="w-full px-4 sm:px-6 lg:px-8 max-w-8xl mx-auto py-16 md:py-24">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-12">
+          <div className="md:w-1/2 text-left mb-10 md:mb-0 order-1 md:order-1 animate-slideIn">
             <div className="mb-4 opacity-0 animate-slideUp" style={{animationDelay: '0.1s', animationFillMode: 'forwards'}}>
               <p className="text-lg text-portfolio-accent font-medium mb-2">Hi, I'm</p>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-portfolio-text">
@@ -86,7 +86,7 @@ const HeroSection = () => {
             </div>
           </div>
           
-          <div className="md:w-1/2 flex justify-center order-2 md:order-2 opacity-0 animate-fadeIn" style={{animationDelay: '0.3s', animationFillMode: 'forwards'}}>
+          <div className="md:w-1/2 flex justify-center order-2 md:order-2 opacity-0 animate-slideRight" style={{animationDelay: '0.3s', animationFillMode: 'forwards'}}>
             <div className="w-64 h-64 md:w-80 md:h-80 overflow-hidden rounded-full border-4 border-portfolio-accent/20 shadow-xl bg-gradient-to-br from-portfolio-card to-portfolio-dark">
               <img 
                 src="/lovable-uploads/31be7720-576a-44f1-9de0-1dd61f16b256.png" 
