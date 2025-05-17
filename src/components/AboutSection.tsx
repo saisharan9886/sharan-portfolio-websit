@@ -8,11 +8,11 @@ const AboutSection = () => {
   const [activeTab, setActiveTab] = useState("about");
   
   return (
-    <section id="about" className="min-h-screen py-20 flex items-center bg-portfolio-dark">
-      <div className="w-full px-4 sm:px-6 lg:px-8 max-w-8xl mx-auto">
-        <h2 className="section-title text-portfolio-text">About Me</h2>
+    <section id="about" className="min-h-screen py-20 flex items-center justify-center bg-portfolio-dark">
+      <div className="w-full px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <h2 className="section-title text-portfolio-text mb-10">About Me</h2>
         
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-5xl mx-auto">
           <div className="flex mb-6 gap-1 border-b border-portfolio-card opacity-0 animate-slideUp" style={{animationDelay: '0.4s', animationFillMode: 'forwards'}}>
             <Button
               variant={activeTab === "about" ? "default" : "ghost"}
@@ -39,14 +39,14 @@ const AboutSection = () => {
           <div className="opacity-0 animate-slideUp" style={{animationDelay: '0.5s', animationFillMode: 'forwards'}}>
             {activeTab === "about" && (
               <Card className="border-0 shadow-none bg-transparent">
-                <CardContent className="pt-6 px-0">
-                  <p className="text-portfolio-text leading-relaxed">
+                <CardContent className="pt-6 px-0 md:px-4">
+                  <p className="text-portfolio-text text-lg leading-relaxed">
                     Hello! I'm P. Sai Sharan, a passionate Developer with a strong foundation in full-stack development. I specialize in building responsive and user-friendly web applications using modern technologies.
                   </p>
-                  <p className="text-portfolio-text leading-relaxed mt-4">
+                  <p className="text-portfolio-text text-lg leading-relaxed mt-6">
                     Currently pursuing Computer Science Engineering with a focus on Cyber Security at CMR Technical Campus, I combine my academic knowledge with practical development skills to create innovative solutions.
                   </p>
-                  <p className="text-portfolio-text leading-relaxed mt-4">
+                  <p className="text-portfolio-text text-lg leading-relaxed mt-6">
                     I enjoy tackling complex problems and am always eager to learn new technologies and methodologies to enhance my development capabilities.
                   </p>
                 </CardContent>
@@ -55,13 +55,13 @@ const AboutSection = () => {
             
             {activeTab === "experience" && (
               <Card className="border-0 shadow-none bg-transparent">
-                <CardContent className="pt-6 px-0">
-                  <div className="space-y-6">
-                    <div className="border-l-2 border-portfolio-accent pl-4 pb-6">
+                <CardContent className="pt-6 px-0 md:px-4">
+                  <div className="space-y-8">
+                    <div className="border-l-2 border-portfolio-accent pl-6 pb-6">
                       <p className="text-sm text-portfolio-secondary">2022 - Present</p>
-                      <h3 className="text-xl font-medium text-portfolio-text">Full Stack Developer</h3>
+                      <h3 className="text-2xl font-medium text-portfolio-text">Full Stack Developer</h3>
                       <p className="text-portfolio-accent">Freelance</p>
-                      <p className="mt-2 text-portfolio-text">Developing responsive web applications using the MERN stack. Building custom solutions for clients across various industries.</p>
+                      <p className="mt-4 text-lg text-portfolio-text">Developing responsive web applications using the MERN stack. Building custom solutions for clients across various industries.</p>
                     </div>
                   </div>
                 </CardContent>

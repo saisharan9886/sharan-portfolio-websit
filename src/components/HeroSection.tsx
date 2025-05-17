@@ -38,9 +38,9 @@ const HeroSection = () => {
 
   return (
     <section id="home" className="min-h-screen flex items-center bg-portfolio-dark">
-      <div className="w-full px-4 sm:px-6 lg:px-8 max-w-8xl mx-auto py-16 md:py-24">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-12">
-          <div className="md:w-1/2 text-left mb-10 md:mb-0 order-1 md:order-1 animate-slideIn">
+      <div className="w-full px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto py-16 md:py-24">
+        <div className="flex flex-col md:flex-row items-center justify-center gap-16">
+          <div className="md:w-1/2 text-center md:text-left mb-10 md:mb-0 order-1 md:order-1 animate-slideIn">
             <div className="mb-4 opacity-0 animate-slideUp" style={{animationDelay: '0.1s', animationFillMode: 'forwards'}}>
               <p className="text-lg text-portfolio-accent font-medium mb-2">Hi, I'm</p>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-portfolio-text">
@@ -59,7 +59,7 @@ const HeroSection = () => {
               </div>
             </div>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-start mt-8 opacity-0 animate-slideUp" style={{animationDelay: '0.5s', animationFillMode: 'forwards'}}>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start mt-8 opacity-0 animate-slideUp" style={{animationDelay: '0.5s', animationFillMode: 'forwards'}}>
               <Button 
                 onClick={scrollToAbout}
                 className="bg-portfolio-accent hover:bg-portfolio-highlight text-portfolio-dark font-medium px-6 py-2 rounded-full btn-glow"
