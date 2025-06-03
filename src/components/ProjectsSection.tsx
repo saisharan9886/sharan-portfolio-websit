@@ -24,7 +24,7 @@ const ProjectsSection = () => {
       image: "/lovable-uploads/04fbc472-91ba-4360-bb5d-70f61f3c696a.png",
       categories: ["fullstack", "react", "nodejs"],
       technologies: ["React", "Node.js", "MongoDB", "Express", "Redux"],
-      codeLink: "https://github.com/saisharan9886/stream-circle",
+      codeLink: "https://github.com/saisharan9886",
       fullDescription: "Stream Circle is a comprehensive OTT rental platform built with the MERN stack. The platform allows users to rent streaming services for flexible durations ranging from hourly to yearly subscriptions. Users can also buy or sell access to streaming platforms in a secure environment. The application features a robust authentication system, payment integration, and a user-friendly interface for browsing available services. The platform includes a strong verification process to ensure all transactions are safe and legitimate."
     },
     {
@@ -34,7 +34,7 @@ const ProjectsSection = () => {
       image: "/lovable-uploads/b6c2b2ad-c48a-40ff-ba49-d65f5db510cb.png",
       categories: ["fullstack", "react", "nodejs"],
       technologies: ["React", "Node.js", "MongoDB", "Express", "JWT"],
-      codeLink: "https://github.com/saisharan9886/airbnb-clone",
+      codeLink: "https://github.com/saisharan9886",
       fullDescription: "This Airbnb clone is built using the MERN stack and replicates the core functionality of the original platform. Users can create accounts, list properties, browse available listings, make bookings, and process payments. The application features a responsive design, interactive maps for property locations, search filters, user reviews, and a messaging system for hosts and guests. Authentication is handled with JWT tokens, and the database is optimized for efficient queries and scalability."
     },
     {
@@ -44,7 +44,7 @@ const ProjectsSection = () => {
       image: "https://images.unsplash.com/photo-1649972904349-6e44c42644a7?ixlib=rb-4.0.3",
       categories: ["fullstack", "react"],
       technologies: ["React", "Node.js", "MongoDB", "Express", "Stripe"],
-      codeLink: "https://github.com/saisharan9886/ecommerce-platform",
+      codeLink: "https://github.com/saisharan9886",
       fullDescription: "This e-commerce platform provides a complete shopping experience from product browsing to checkout. Built with React for the frontend and Node.js/Express for the backend, it includes features like product categorization, search functionality, user reviews, wishlist, shopping cart, secure checkout with Stripe integration, and order tracking. The admin panel allows for inventory management, order processing, and sales analytics. The responsive design ensures a seamless experience across all devices."
     },
   ];
