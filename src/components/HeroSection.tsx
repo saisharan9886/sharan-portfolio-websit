@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowDown } from "lucide-react";
@@ -28,7 +27,7 @@ const HeroSection = () => {
   };
 
   const handleDownloadResume = () => {
-    window.open("https://drive.google.com/file/d/1IHiOSGB1xtdN-rHdmmZiu-ka7lqGr0LW/view?usp=sharing", "_blank");
+    window.open("https://drive.google.com/file/d/1cHsWIj_Xfu7pVqmeKT6dV1ymJA9V5Ty0/view?usp=sharing", "_blank");
   };
 
   return (
