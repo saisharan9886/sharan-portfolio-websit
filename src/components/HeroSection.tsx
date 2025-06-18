@@ -28,12 +28,7 @@ const HeroSection = () => {
   };
 
   const handleDownloadResume = () => {
-    const link = document.createElement('a');
-    link.href = "/lovable-uploads/ada8eb52-caf3-4c5a-a3c5-66fdcb000d66.png";
-    link.download = "P_Sai_Sharan_Resume.png";
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
+    window.open("https://drive.google.com/file/d/1IHiOSGB1xtdN-rHdmmZiu-ka7lqGr0LW/view?usp=sharing", "_blank");
   };
 
   return (

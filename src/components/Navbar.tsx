@@ -90,12 +90,12 @@ const Navbar = () => {
             {sections.map((section) => (
               <Button
                 key={section.id}
-                variant={activeSection === section.id ? "default" : "ghost"}
+                variant="ghost"
                 onClick={() => scrollToSection(section.id)}
-                className={`transition-all ${
+                className={`transition-all duration-300 ${
                   activeSection === section.id
-                    ? "bg-portfolio-accent text-portfolio-dark"
-                    : "text-portfolio-text hover:text-portfolio-accent hover:bg-portfolio-card/50"
+                    ? "bg-portfolio-accent text-portfolio-dark hover:bg-portfolio-highlight"
+                    : "text-portfolio-text hover:text-portfolio-accent hover:bg-portfolio-accent/10"
                 }`}
               >
                 {section.label}
@@ -114,12 +114,12 @@ const Navbar = () => {
           {sections.map((section) => (
             <Button
               key={section.id}
-              variant={activeSection === section.id ? "default" : "ghost"}
+              variant="ghost"
               onClick={() => scrollToSection(section.id)}
-              className={`w-full justify-start transition-all ${
+              className={`w-full justify-start transition-all duration-300 ${
                 activeSection === section.id
-                  ? "bg-portfolio-accent text-portfolio-dark"
-                  : "text-portfolio-text hover:text-portfolio-accent hover:bg-portfolio-card/50"
+                  ? "bg-portfolio-accent text-portfolio-dark hover:bg-portfolio-highlight"
+                  : "text-portfolio-text hover:text-portfolio-accent hover:bg-portfolio-accent/10"
               }`}
             >
               {section.label}
