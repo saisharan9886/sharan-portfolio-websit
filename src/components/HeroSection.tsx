@@ -1,23 +1,47 @@
+
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { ArrowDown } from "lucide-react";
 
 const HeroSection = () => {
-  const [roleIndex, setRoleIndex] = useState(0);
+  const [currentText, setCurrentText] = useState("");
+  const [currentRoleIndex, setCurrentRoleIndex] = useState(0);
+  const [isDeleting, setIsDeleting] = useState(false);
+  
   const roles = [
-    "UI/UX Designer",
     "Front End Developer",
+    "UI/UX Designer",
     "Backend Developer", 
     "Full Stack Developer"
   ];
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setRoleIndex((prevIndex) => (prevIndex + 1) % roles.length);
-    }, 3000);
+    const currentRole = roles[currentRoleIndex];
+    const typingSpeed = isDeleting ? 50 : 100;
+    
+    const timeout = setTimeout(() => {
+      if (!isDeleting) {
+        // Typing forward
+        if (currentText.length < currentRole.length) {
+          setCurrentText(currentRole.substring(0, currentText.length + 1));
+        } else {
+          // Finished typing current role, wait then start deleting
+          setTimeout(() => setIsDeleting(true), 2000);
+        }
+      } else {
+        // Deleting backward
+        if (currentText.length > 0) {
+          setCurrentText(currentText.substring(0, currentText.length - 1));
+        } else {
+          // Finished deleting, move to next role
+          setIsDeleting(false);
+          setCurrentRoleIndex((prevIndex) => (prevIndex + 1) % roles.length);
+        }
+      }
+    }, typingSpeed);
 
-    return () => clearInterval(interval);
-  }, []);
+    return () => clearTimeout(timeout);
+  }, [currentText, currentRoleIndex, isDeleting, roles]);
 
   const scrollToAbout = () => {
     const aboutSection = document.getElementById("about");
@@ -47,7 +71,8 @@ const HeroSection = () => {
                 <h2 className="text-2xl md:text-3xl font-medium text-portfolio-text">
                   I'm a{" "}
                   <span className="text-portfolio-accent">
-                    {roles[roleIndex]}
+                    {currentText}
+                    <span className="animate-pulse">|</span>
                   </span>
                 </h2>
               </div>
