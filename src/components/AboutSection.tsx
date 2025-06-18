@@ -18,8 +18,8 @@ const AboutSection = () => {
               variant={activeTab === "about" ? "default" : "ghost"}
               onClick={() => setActiveTab("about")}
               className={activeTab === "about" 
-                ? "rounded-b-none rounded-t-lg bg-portfolio-accent text-portfolio-dark font-medium" 
-                : "rounded-b-none rounded-t-lg text-portfolio-text hover:bg-portfolio-card"}
+                ? "rounded-b-none rounded-t-lg bg-portfolio-accent text-portfolio-dark font-medium hover:bg-portfolio-highlight" 
+                : "rounded-b-none rounded-t-lg text-portfolio-text hover:bg-portfolio-accent hover:text-portfolio-dark transition-all duration-300"}
             >
               <User className="mr-2 h-4 w-4" />
               About
@@ -28,8 +28,8 @@ const AboutSection = () => {
               variant={activeTab === "experience" ? "default" : "ghost"}
               onClick={() => setActiveTab("experience")}
               className={activeTab === "experience" 
-                ? "rounded-b-none rounded-t-lg bg-portfolio-accent text-portfolio-dark font-medium" 
-                : "rounded-b-none rounded-t-lg text-portfolio-text hover:bg-portfolio-card"}
+                ? "rounded-b-none rounded-t-lg bg-portfolio-accent text-portfolio-dark font-medium hover:bg-portfolio-highlight" 
+                : "rounded-b-none rounded-t-lg text-portfolio-text hover:bg-portfolio-accent hover:text-portfolio-dark transition-all duration-300"}
             >
               <Briefcase className="mr-2 h-4 w-4" />
               Experience

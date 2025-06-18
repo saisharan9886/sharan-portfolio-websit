@@ -25,7 +25,7 @@ const SkillsSection = () => {
     ],
     tools: [
       { name: "Git", icon: "/lovable-uploads/43e72617-a197-4744-a8d0-4f35848d9a1e.png" },
-      { name: "GitHub", icon: "/lovable-uploads/4355ecb6-bd1c-4ec7-99d5-a222acffcad5.png" },
+      { name: "GitHub", icon: "/lovable-uploads/ca3c7fc8-e482-4208-8b41-fda31c687cf0.png" },
       { name: "VS Code", icon: "/lovable-uploads/0593fccd-1b5a-4568-8755-10fc518fc8ef.png" },
     ],
   };
@@ -35,11 +35,11 @@ const SkillsSection = () => {
       <h3 className="text-xl font-bold mb-4 text-portfolio-text">{title}</h3>
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
         {skills.map((skill) => (
-          <Card key={skill.name} className="overflow-hidden border-0 bg-portfolio-card hover:border-portfolio-accent transition-all hover:shadow-md portfolio-card">
+          <Card key={skill.name} className="overflow-hidden border-0 bg-portfolio-card hover:border-portfolio-accent hover:shadow-lg hover:scale-105 transition-all duration-300 portfolio-card cursor-pointer">
             <CardContent className="p-4">
               <div className="text-center">
                 {typeof skill.icon === 'string' && skill.icon.startsWith('/') ? (
-                  <div className="flex justify-center mb-2">
+                  <div className="flex justify-center mb-2 transition-transform duration-300 hover:scale-110">
                     <img 
                       src={skill.icon} 
                       alt={`${skill.name} icon`} 
@@ -47,9 +47,9 @@ const SkillsSection = () => {
                     />
                   </div>
                 ) : (
-                  <div className="text-3xl mb-2">{skill.icon}</div>
+                  <div className="text-3xl mb-2 transition-transform duration-300 hover:scale-110">{skill.icon}</div>
                 )}
-                <h4 className="text-base font-medium text-portfolio-text">{skill.name}</h4>
+                <h4 className="text-base font-medium text-portfolio-text hover:text-portfolio-accent transition-colors duration-300">{skill.name}</h4>
               </div>
             </CardContent>
           </Card>
