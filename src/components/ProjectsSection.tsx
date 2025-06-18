@@ -19,6 +19,16 @@ const ProjectsSection = () => {
   const projects = [
     {
       id: 1,
+      title: "Crypto Pay",
+      description: "A Web3.0 DApp for secure peer-to-peer money transfers on the Ethereum blockchain.",
+      image: "https://images.unsplash.com/photo-1639762681485-074b7f938ba0?ixlib=rb-4.0.3",
+      categories: ["fullstack", "web3", "blockchain"],
+      technologies: ["React.js", "Solidity", "Web3.js", "Ethers.js", "Hardhat", "MetaMask", "IPFS"],
+      codeLink: "https://github.com/saisharan9886",
+      fullDescription: "Crypto Pay is a comprehensive Web3.0 decentralized application (DApp) built for secure peer-to-peer money transfers on the Ethereum blockchain. The project features robust Solidity smart contracts developed and tested using the Hardhat framework, ensuring secure and efficient transactions. The frontend is built with React.js and integrates seamlessly with the blockchain through Web3.js and Ethers.js libraries. Users can connect their MetaMask wallets to perform secure transactions, while IPFS (InterPlanetary File System) is leveraged for decentralized storage of transaction data, ensuring data integrity and availability across the network."
+    },
+    {
+      id: 2,
       title: "Stream Circle",
       description: "A stream/OTT rental platform with flexible rental options and secure transactions.",
       image: "/lovable-uploads/04fbc472-91ba-4360-bb5d-70f61f3c696a.png",
@@ -28,7 +38,7 @@ const ProjectsSection = () => {
       fullDescription: "Stream Circle is a comprehensive OTT rental platform built with the MERN stack. The platform allows users to rent streaming services for flexible durations ranging from hourly to yearly subscriptions. Users can also buy or sell access to streaming platforms in a secure environment. The application features a robust authentication system, payment integration, and a user-friendly interface for browsing available services. The platform includes a strong verification process to ensure all transactions are safe and legitimate."
     },
     {
-      id: 2,
+      id: 3,
       title: "Airbnb Clone",
       description: "A fully functional Airbnb clone with listing, booking and payment features.",
       image: "/lovable-uploads/b6c2b2ad-c48a-40ff-ba49-d65f5db510cb.png",
@@ -38,7 +48,7 @@ const ProjectsSection = () => {
       fullDescription: "This Airbnb clone is built using the MERN stack and replicates the core functionality of the original platform. Users can create accounts, list properties, browse available listings, make bookings, and process payments. The application features a responsive design, interactive maps for property locations, search filters, user reviews, and a messaging system for hosts and guests. Authentication is handled with JWT tokens, and the database is optimized for efficient queries and scalability."
     },
     {
-      id: 3,
+      id: 4,
       title: "E-Commerce Website",
       description: "A responsive e-commerce platform with complete shopping features.",
       image: "https://images.unsplash.com/photo-1649972904349-6e44c42644a7?ixlib=rb-4.0.3",
